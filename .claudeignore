@@ -1,0 +1,38 @@
+# ==============================================================================
+# Claude & AI Assistant Ignore List for Pars Linux Base (pars-base)
+# ==============================================================================
+
+# Git & Versiyon Kontrolü
+.git/
+.gitignore
+
+# Paketleme ve Derleme Çıktıları
+build/
+*.deb
+*.build
+*.buildinfo
+*.changes
+*.tar.gz
+*.tar.xz
+*.tar.zst
+
+# Debian Paketleme Geçici Dosyaları
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/pars-base/
+debian/*.substvars
+debian/*.debhelper.log
+
+# Sistem ve Editör Kalıntıları
+*~
+*.swp
+*.swo
+.DS_Store
+.cache/
+*.log
+
+# Antigravity & AI Araçları Çıktıları
+.system_generated/
+scratch/
+.gemini/
