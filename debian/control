@@ -1,0 +1,79 @@
+Source: pars-base
+Section: metapackages
+Priority: optional
+Maintainer: Pars Linux Developers <dev@parslinux.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.1
+Homepage: https://github.com/parslinux/pars-base
+
+Package: pars-base
+Architecture: all
+Depends: ${misc:Depends},
+         pars-branding,
+         dbus-user-session,
+         dbus-x11,
+         desktop-base,
+         gvfs,
+         gvfs-backends,
+         gvfs-fuse,
+         xdg-user-dirs,
+         xdg-utils,
+         pipewire,
+         pipewire-audio,
+         pipewire-alsa,
+         pipewire-pulse,
+         wireplumber,
+         libspa-0.2-bluetooth,
+         libspa-0.2-modules,
+         fonts-ubuntu,
+         fonts-noto-core,
+         fonts-noto-color-emoji,
+         fonts-dejavu-core,
+         fonts-liberation2,
+         xorg,
+         xserver-xorg-input-all,
+         xserver-xorg-video-all,
+         network-manager,
+         bluez,
+         wireless-tools,
+         wpasupplicant
+Recommends: alsa-utils,
+            btrfs-progs,
+            command-not-found,
+            curl,
+            dnsutils,
+            dosfstools,
+            eject,
+            f2fs-tools,
+            fastfetch,
+            fonts-font-awesome,
+            fzf,
+            iw,
+            libcanberra-gtk3-module,
+            lz4,
+            net-tools,
+            ntfs-3g,
+            p7zip-full,
+            printer-driver-all,
+            pulseaudio-utils,
+            tree,
+            unzip,
+            webp-pixbuf-loader,
+            xfsprogs,
+            zip
+Breaks: pulseaudio,
+        pulseaudio-module-bluetooth,
+        pardus-common-desktop
+Conflicts: pulseaudio,
+           pulseaudio-module-bluetooth
+Replaces: pulseaudio,
+          pulseaudio-module-bluetooth,
+          pardus-common-desktop
+Description: Pars Linux Base Metapackage (Core system, Pipewire audio, fonts)
+ This metapackage provides the core foundation of the Pars Linux operating
+ system. It depends on essential system libraries, the modern Pipewire
+ multimedia sound architecture, Turkish-compatible modern fonts, hardware
+ abstraction layers, and the Pars visual branding package.
+ .
+ All desktop environments (pars-desktop-gnome, pars-desktop-xfce) depend
+ directly on this base package.

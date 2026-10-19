@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -e
+
+case "$1" in
+    configure)
+        echo "🐆 [ParsLinux Base] Sistem tabanı yapılandırılıyor..."
+
+        # Yazı tipi (Font) önbelleğini güncelle
+        if command -v fc-cache &>/dev/null; then
+            echo "🔤 Yazı tipi (font) önbelleği güncelleniyor..."
+            fc-cache -s || true
+        fi
+
+        # Pipewire ses sunucusu servis önayarı
+        if command -v systemctl &>/dev/null; then
+            echo "🔊 Pipewire & Wireplumber ses servisleri hazırlanıyor..."
+            # Kullanıcı oturumu servislerini global preset ile etkinleştir
+            systemctl --global enable pipewire.socket pipewire-pulse.socket wireplumber.service 2>/dev/null || true
+        fi
+
+        # D-Bus ve XDG kullanıcı dizinleri
+        if command -v xdg-user-dirs-update &>/dev/null; then
+            xdg-user-dirs-update || true
+        fi
+
+        echo "✓ ParsLinux Base taban yapılandırması tamamlandı."
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+#DEBHELPER#
+exit 0

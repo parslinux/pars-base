@@ -1,0 +1,12 @@
+build/
+*.deb
+*.tar.gz
+*.tar.xz
+*.tar.zst
+.debhelper/
+debian/.debhelper/
+debian/pars-base/
+debian/pars-base.*
+debian/files
+debian/*.substvars
+*~

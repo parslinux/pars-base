@@ -1,0 +1,9 @@
+pars-base (1.0.0) unstable; urgency=medium
+
+  * Initial release for ParsLinux 1.0 "Anatolian".
+  * Integrated pars-branding visual identity.
+  * Migrated default sound server to Pipewire (PulseAudio replacement).
+  * Added core Turkish and international unicode font dependencies.
+  * Added essential hardware abstraction, D-Bus and networking foundations.
+
+ -- Pars Linux Developers <dev@parslinux.org>  Sun, 19 Oct 2026 21:00:00 +0300

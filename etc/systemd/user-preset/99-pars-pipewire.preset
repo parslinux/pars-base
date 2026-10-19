@@ -1,0 +1,4 @@
+# ParsLinux PipeWire Kullanıcı Servis Önayarı
+enable pipewire.socket
+enable pipewire-pulse.socket
+enable wireplumber.service
